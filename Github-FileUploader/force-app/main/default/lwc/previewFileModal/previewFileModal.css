@@ -1,0 +1,71 @@
+.slds-modal__container {
+    max-width: 100% !important;
+    position: relative; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.yes-scroll{
+    overflow-y: auto !important;
+}
+
+.no-scroll {
+    overflow-y: hidden !important; 
+}
+
+.previewText{
+    display: flex;
+    font-size: larger;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background-color: white;
+}
+
+.arrow-button:hover{
+    background-color: white;
+}
+
+.left-arrow {
+    left: -40px;
+}
+
+.right-arrow {
+    right: -40px; 
+}
+
+.slds-spinner_container{
+    position: fixed !important;
+}
+
+.previewBox{
+    width: -webkit-fill-available !important; 
+    height: 100% !important;
+}
+
+.imageBox{
+    margin: 0; 
+    width: 100% !important;
+    height: 800px;
+}
+
+.imageSrc{
+    margin: auto !important;
+    width: 100% !important;
+}
+
+.iframeBox{
+    width: 100%; 
+    height: 800px;
+}
