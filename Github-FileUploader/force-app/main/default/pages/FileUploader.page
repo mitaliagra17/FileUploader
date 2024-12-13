@@ -1,0 +1,6 @@
+<apex:page showHeader="false" sidebar="false" applyBodyTag="false" standardStylesheets="false">
+    <script type="text/javascript">__sfdcSessionId = '{!$Api.Session_Id}';</script>
+    <script src="../../soap/ajax/30.0/connection.js" type="text/javascript"></script>
+    <apex:includeScript value="{!$Resource.uploadScript}"/>
+    <body></body>
+</apex:page>

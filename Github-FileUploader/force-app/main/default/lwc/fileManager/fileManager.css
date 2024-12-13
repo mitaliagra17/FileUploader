@@ -1,0 +1,120 @@
+.hidden-input {
+    display: none;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+}
+
+.drop-area p {
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.drop-area a {
+    color: #0070d2;
+    text-decoration: underline;
+}
+
+.drop-area a:hover {
+    color: #004c8c;
+}
+
+.horizontal-radio-group {
+    display: flex;
+    gap: 1rem; 
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.drop-area {
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    transition: border 0.3s ease-in-out;
+}
+
+.drop-zone.highlight {
+    border-color: #0070d2; 
+    background-color: #f0f8ff; 
+}
+
+.drag-text {
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.drag-text.text-highlight {
+    color: #0070d2 !important; 
+}
+
+.slds-modal__content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.slds-modal__content li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.freeze-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: all; 
+    text-align: center;
+}
+
+.displayFileNumber{
+    z-index: 1000 !important;
+    width: 100%;
+    padding-top: 5rem;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.existingFilesBlock{
+    padding: 20px 0px; 
+    font-size: 16px;
+}
+
+.searchBox{
+    margin-bottom: 15px;
+    margin-top: -14px;
+}
+
+.spinnerBox{
+    z-index: 0 !important;
+}
+
+.deletePopupFooter{
+    margin-right: 1rem;
+}
+
+.dropInputContainer{
+    display:none;
+}
+
+.vfPageBox{
+    display: none;
+}

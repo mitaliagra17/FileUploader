@@ -1,0 +1,62 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading Preview" size="medium"></lightning-spinner>
+    </template>
+    <template if:true={showModal}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open" style={modalStyle}>
+                <div class="slds-modal__container previewBox">
+
+                <!-- Arrow buttons -->
+                <lightning-button-icon class="arrow-button left-arrow" icon-name="utility:left"
+                    alternative-text="Previous" onclick={handlePrevious}
+                    disabled={isPreviousDisabled}></lightning-button-icon>
+                <lightning-button-icon class="arrow-button right-arrow" icon-name="utility:right"
+                    alternative-text="Next" onclick={handleNext} disabled={isNextDisabled}>
+                </lightning-button-icon>
+
+                <header class="slds-modal__header">
+                    <lightning-button-icon class="slds-modal__close" title="Close" icon-name="utility:close"
+                        icon-class="slds-button_icon-inverse" onclick={closeModal}></lightning-button-icon>
+                    <h2 id="modal-heading-01" class="slds-text-heading_large">File Preview</h2>
+                </header>
+                <div class={modalContentClasses} id="modal-content-id-1">
+                    <lightning-layout>
+                        <lightning-layout-item flexibility="auto">
+                            <article class="slds-card">
+                                    <div class="slds-card__body slds-card__body_inner imageBox">
+                                    <template if:false={isLoading}>
+                                        <template if:false={showFrame}>
+                                            <template if:true={isPreviewAvailable}>
+                                                    <img src={url} class="imageSrc"/>
+                                            </template>
+                                            <template if:false={isPreviewAvailable}>
+                                                <div class="previewText">
+                                                    <div>
+                                                        <p><b>No Preview Available</b></p>
+                                                    </div>
+                                                    <div><a href={downloadUrl} target="_blank">Download the file</a>
+                                                    </div>
+                                                </div>
+                                            </template>
+                                        </template>
+                                        <template if:true={isPreviewAvailable}>
+                                            <template if:true={showFrame}>
+                                                    <iframe src={url} class="iframeBox"></iframe>
+                                            </template>
+                                        </template>
+                                    </template>
+                                </div>
+                            </article>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+                <footer class="slds-modal__footer slds-grid slds-grid_align-spread">
+                    <lightning-button variant="brand-outline" label="Cancel" onclick={closeModal}
+                        title="Cancel"></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>
